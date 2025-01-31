@@ -25,7 +25,7 @@ class HomeViewModel
             loadPokemonList()
         }
 
-        private fun loadPokemonList() {
+        fun loadPokemonList() {
             viewModelScope.launch {
                 getPokemonListUseCase().collect { result ->
                     _uiState.update { state ->
